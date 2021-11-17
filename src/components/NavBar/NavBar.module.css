@@ -1,0 +1,42 @@
+.nav {
+    grid-area: n;
+    background-color: darkgray;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item a.activeLink {
+    color: gold;
+}
+
+
+.friendItems {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+}
+
+.friendItems img {
+    width: 30px;
+}
+
+.friendItems a {
+    text-align: center;
+    width: 55px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border: 2px #ccc solid;
+}
+
+.friendItems li {
+
+    list-style-type: none;
+    display: inline;
+    margin-left: 5px;
+
+
+}
+
