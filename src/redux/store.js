@@ -30,7 +30,7 @@ let store = {
         {id: 2, message: 'how is u '},
         {id: 3, message: 'cool'}
       ],
-      newMessageText: ''
+      newMessageBody: ''
     },
     sideBar: {
       friends: [
@@ -45,6 +45,7 @@ let store = {
   _callSubscriber() {
     console.log("state changed");
   },
+
   getState() {
     return this._state;
   },
@@ -56,6 +57,7 @@ let store = {
     this._state.profilePage = profileReducer(this._state.profilePage, action)
     this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action)
     this._state.sideBar = sidebarReducer(this._state.sideBar, action)
+
     this._callSubscriber(this._state);
   }
 };

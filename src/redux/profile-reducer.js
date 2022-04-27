@@ -1,8 +1,6 @@
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_CHANGE = 'UPDATE-NEW-POST-CHANGE';
 
-
-
 let initialState = {
   posts: [
     {id: 1, message: 'Hello World!', likesCount: 12},
@@ -36,10 +34,15 @@ const profileReducer = (state = initialState, action) => {
   }
 
 }
-export const addPostActionCreator = () => ({type: ADD_POST});
+export const addPostActionCreator = () => ({
+  type: ADD_POST
+});
 
-export const updateNewPostTextActionCreator = (text) => (
-  {type: UPDATE_NEW_POST_CHANGE, newText: text}
-);
+export const updateNewPostTextActionCreator = (text) => {
+  return {
+    type: UPDATE_NEW_POST_CHANGE,
+    newText: text
+  }
+};
 
 export default profileReducer;
