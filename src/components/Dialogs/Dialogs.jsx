@@ -14,7 +14,6 @@ const Dialogs = (props) => {
 
 
   let onSendMessageClick = () => {
-
     props.sendMessage();
   };
 
@@ -33,11 +32,8 @@ const Dialogs = (props) => {
       </div>
 
       <div className={s.messages}>
-
         <div className="">{messageElements}</div>
-
         <div className="new-message">
-
           <div>
             <textarea
               onChange={onNewMessageChange}
@@ -47,13 +43,9 @@ const Dialogs = (props) => {
 
           <div>
             <button onClick={onSendMessageClick}>Send</button>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
 
   )
