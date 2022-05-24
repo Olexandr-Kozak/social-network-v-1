@@ -3,7 +3,7 @@ const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
-const TOGGLE_IS_FETCHING ="TOGGLE_IS_FETCHING";
+const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
 
 let initialState = {
   users: [],
@@ -41,20 +41,20 @@ const usersReducer = (state = initialState, action) => {
     case SET_USERS:
       return {
         ...state,
-        users:   action.users
+        users: action.users
       }
     case SET_CURRENT_PAGE:
       return {
         ...state,
-        currentPage:  action.currentPage
-    }
+        currentPage: action.currentPage
+      }
     case SET_TOTAL_USERS_COUNT:
-      return{
+      return {
         ...state,
         totalUsersCount: action.count
       }
     case TOGGLE_IS_FETCHING:
-      return{
+      return {
         ...state,
         isFetching: action.count
       }

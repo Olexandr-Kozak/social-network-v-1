@@ -54,7 +54,7 @@ export const updateNewPostTextAC = (text) => {
     newText: text
   }
 };
-export const setUserProfile = (profile) => ({type: SET_USER_PROFILE,  profile})
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 
 
 export default profileReducer;
