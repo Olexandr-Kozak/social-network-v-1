@@ -14,15 +14,16 @@ export const userAPI = {
     return instance.get(`users?page=${currentPage}&count=${pageSize}`).then(response => {
       return response.data
     });
-  },
-  getUnfollow(id) {
-    return instance.delete(`follow/${id}`).then(response => {
-      return response.data
-    });
-  },
-  getFollow(id) {
-    return instance.post(`follow/${id}`).then(response => {
-      return response.data
-    });
   }
 };
+
+export const getUnFollow = (id) => {
+  return instance.delete(`follow/${id}`).then(response => {
+    return response.data
+  });
+}
+export const getFollow = (id) => {
+  return instance.post(`follow/${id}`).then(response => {
+    return response.data
+  });
+}
