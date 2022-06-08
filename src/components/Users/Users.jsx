@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./users.module.css";
 import userPhoto from "../../Assets/images/logo-photo.jpg";
 import {NavLink} from "react-router-dom";
-import {getFollow, getUnFollow, userAPI} from "../../api/api";
-
 
 const Users = (props) => {
 
@@ -33,25 +31,14 @@ const Users = (props) => {
           </div>
           <div>
             {u.followed
-              ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                props.toogleFollowingProgress(true, u.id)
-                getUnFollow(u.id).then(data => {
-                  if (data.resultCode === 0) {
-                    props.unfollow(u.id)
-                  }
-                  props.toogleFollowingProgress(false, u.id)
-                });
-              }}>Unfollow</button>
-              : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                props.toogleFollowingProgress(true, u.id)
-                // debugger
-                getFollow(u.id).then(data => {
-                  if (data.resultCode === 0) {
-                    props.follow(u.id)
-                  }
-                  props.toogleFollowingProgress(false, u.id)
-                });
-              }}>Follow</button>
+              ? <button disabled={props.followingInProgress.some(id => id === u.id)}
+                        onClick={() => {
+                          props.unfollow(u.id)
+                        }}>Unfollow</button>
+              : <button disabled={props.followingInProgress.some(id => id === u.id)}
+                        onClick={() => {
+                          props.follow(u.id)
+                        }}>Follow</button>
             }
               </div>
               </span>
