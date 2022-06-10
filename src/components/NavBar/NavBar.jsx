@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 const NavBar = (props) => {
 
   let friendsElement = props.sideBar.friends.map(
-    (fr) => <li key={fr.id}><a href="#"><img src="https://cdn.iconscout.com/icon/free/png-256/face-1659511-1410033.png"
+    (fr) => <li key={fr.id}><a href="/"><img src="https://cdn.iconscout.com/icon/free/png-256/face-1659511-1410033.png"
                                  alt={fr.id}/><p>{fr.names}</p></a></li>
   );
 
