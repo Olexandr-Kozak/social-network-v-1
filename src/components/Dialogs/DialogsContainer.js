@@ -11,14 +11,6 @@ let mapStateToProps = (state) => {
   }
 }
 
-// let mapDispatchToProps = (dispatch) => {
-//   return {
-//     sendMessage: (newMessageBody) => {
-//       dispatch(sendMessage(newMessageBody));
-//     }
-//   }
-// }
-
 export default compose(
   connect(mapStateToProps, {sendMessage})
   // withAuthRedirect
