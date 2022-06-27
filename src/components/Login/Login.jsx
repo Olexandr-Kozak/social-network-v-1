@@ -6,7 +6,7 @@ import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
 //import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
-
+import s from "../common/FormsControls/FormControls.module.css"
 
 // const maxLength20 = maxLengthCreator(20)
 
@@ -25,6 +25,7 @@ const LoginForm = (props) => {
       <div className="">
         <Field type="checkbox" name={"rememberMe"} component={Input}/>remember me
       </div>
+      {props.error && <div className={s.formSummaryError}> {props.error} </div>}
       <div className="">
         <button type="submit">Login</button>
       </div>
